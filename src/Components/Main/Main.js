@@ -8,9 +8,11 @@ const Main = () => {
     return (
         <main>
 
-            <h1>Dashboard</h1>
-            <div className="date">
-                <input type="date" />
+            <div className="header">
+                <h1>Agent Portal</h1>
+                <div className="date">
+                    Friday, 22 Sep - 2023
+                </div>
             </div>
 
             <Details />

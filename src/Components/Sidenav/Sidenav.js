@@ -3,6 +3,11 @@ import MenuItem from './MenuItem/MenuItem'
 import './Sidenav.css'
 
 const Sidenav = () => {
+
+    const handleCloseClick = () => {
+        const sideMenu = document.querySelector('aside');
+        sideMenu.style.display = 'none';
+    }
     return (
 
         <aside>
@@ -13,7 +18,7 @@ const Sidenav = () => {
                     <h2>Rishik Sahu</h2>
                 </div>
                 <div className="close" id='close-btn'>
-                    <span className="material-symbols-outlined">
+                    <span className="material-symbols-outlined" onClick={handleCloseClick}>
                         close
                     </span>
 
@@ -21,8 +26,7 @@ const Sidenav = () => {
             </div>
 
             <div className="sidebar">
-
-                <a href='#'>
+                <a href='#' className='active'>
                     <span className={'material-symbols-outlined'}>dashboard</span>
                     <h3>Dashboard</h3>
                 </a>
@@ -42,7 +46,7 @@ const Sidenav = () => {
                     <span className={'material-symbols-outlined'}>gallery_thumbnail</span>
                     <h3>Gallery</h3>
                 </a>
-                <a href='#' className='active'>
+                <a href='#'>
                     <span className={'material-symbols-outlined'}>groups</span>
                     <h3>Teams</h3>
                 </a>

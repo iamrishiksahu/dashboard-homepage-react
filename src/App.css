@@ -13,7 +13,7 @@ h1{
 }
 
 h2{
-  font-size: 1.4rem;
+  font-size: 1.2rem;
 }
 
 h3{
@@ -33,10 +33,11 @@ small{
 }
 
 .profile-picture{
-  width: 2.8rem;
-  height: 2.8rem;
+  width: 2rem;
+  height: 2 rem;
   border-radius: 50%;
   overflow: hidden;
+  box-shadow: var(--box-shadow);
 }
 
 .text-muted{
@@ -45,10 +46,12 @@ small{
 
 p{
   color: var(--color-dark-variant);
+  font-size: 0.8rem;
 }
 
 b{
-  color: var(--color-dark);
+  color: var(--color-info-dark);
+
 }
 
 .primary{
@@ -67,24 +70,45 @@ b{
   color: var(--color-warning);
 }
 
+table{
+  font-size: 0.8rem;
+}
+
 .App{
   display: grid;
-  width: 96%;
+  width: 100%;
   margin: 0 auto;
   gap: 1.8rem;
-  grid-template-columns: 14rem auto 23rem;
+  grid-template-columns: 14rem auto 23rem; 
 }
 
 #support-request-floating{
-
   position: fixed;
   bottom: 2rem;
   right: 2rem;
   background-color: var(--color-primary);
   color: white;
   border-radius: 0.5rem;
-  padding: 0.5rem 1rem;
+  padding: 0.75rem 1rem;
   font-weight: 700;
   box-shadow: var(--box-shadow);
   z-index: 10;
+}
+
+
+/* ------------------------------ MEDIA QUERIES ------------------------------ */
+
+@media screen and (max-width: 1200px) {
+  .App{
+    width: 100%;
+    grid-template-columns: 7rem auto 23rem;
+  }
+  
+}
+@media screen and (max-width: 768px) {
+  .App{
+    width: 100%;
+    grid-template-columns: 1fr;
+  }
+  
 }

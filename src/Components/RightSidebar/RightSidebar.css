@@ -1,13 +1,35 @@
+.right-side{
+    padding-right: 2rem;
+}
+
+.new-univ-apply{
+    background: orange;
+    padding: 0.75rem 1.5rem;
+}
+
 .right-side .top{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-top: 1rem;
+}
+.right-side .top .hamburger{
+    display: none;
+    margin-left: 0.5rem;
+    cursor: pointer;
+}
+.right-side .top .right{
     display: flex;
     gap: 1rem;
     align-items: center;
-    margin-top: 1rem;
     justify-content: right;
 }
 
 .right-side .top .material-icons{
     color: var(--color-dark);
+}
+.right-side .student-application{
+    margin-top: 1rem;
 }
 
 .right-side .student-application .applications-list{
@@ -98,9 +120,41 @@
 #apply-btn{
     background: var(--color-primary);
     border-radius: 1rem;
-    padding: 0.25rem 1.5rem;
+    padding: 0.5rem 1.5rem;
     color: white;
     font-weight: 700;
 }
 
 
+@media screen and (max-width: 768px) {
+    .right-side{
+      width: 100%;
+      margin-top: -1rem;
+      margin-bottom: 4rem;
+      padding: 0 1rem;
+    }
+    .right-side .top{
+        position: fixed;
+        top: 0;
+        left: 0;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 0.8rem;
+        height: 4.6rem;
+        background: white;
+        width: 100%;
+        margin: 0;
+        z-index: 2;
+        box-shadow: 0 1rem 1rem var(--color-light);
+
+    }
+
+    .right-side .timeline, .student-application {
+        width: 100%;
+        /* margin-left: 1rem; */
+    }
+
+    .right-side .top .hamburger{
+        display: inline;
+    }
+  }

@@ -1,16 +1,39 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './RightSidebar.css'
+import PopupComponent from '../Main/PopupComponent/PopupComponent';
 
 const RightSidebar = () => {
+
+    const handleMenuClick =  () => {
+        const sideMenu =  document.querySelector('aside');
+        sideMenu.style.display = 'block';
+    }
+
+    const [openPopup, setOpenPopup] = useState(false);
+
+    const applyToNewUniversity = () => {
+
+        setOpenPopup(true);
+
+    }
     return (
         <div className="right-side">
+            {openPopup? <PopupComponent setOpenPopup={setOpenPopup}/> : <></>}
 
             <div className="top">
-                <button id='apply-btn'>Apply Now</button>
-                <span class="material-icons">
-                    notifications
+
+                <span class="material-icons hamburger" onClick={handleMenuClick}>
+                    menu
                 </span>
-                <img className='profile-picture' src='/profile-picture-placeholder.jpg' alt='profile_picture' />
+
+                <div className="right">
+                    <button id='apply-btn'>Apply Now</button>
+                    <span class="material-icons">
+                        notifications
+                    </span>
+                    <img className='profile-picture' src='/profile-picture-placeholder.jpg' alt='profile_picture' />
+                </div>
+
             </div>
 
             {/** ----------------------------- STUDENT APPLICATIONS --------------------------- */}
@@ -30,6 +53,10 @@ const RightSidebar = () => {
                         <h3>Indian Institute of Technology, KGP</h3>
                         <small>Bachelor of Technology in Civil Engineering</small>
                     </div>
+
+                    {/* <div className="new-application">
+                        <button className='new-univ-apply' onClick={applyToNewUniversity}>Apply Now to Neew University</button>
+                    </div> */}
                 </div>
             </div>
 
