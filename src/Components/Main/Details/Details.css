@@ -1,0 +1,35 @@
+.details {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.details .agent, .student{
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    border-radius: 1rem;
+    padding: 1rem;
+    background-color: white;
+    box-shadow: var(--box-shadow);
+}
+
+.details .agent{
+    margin-left: 1rem;
+}
+
+.details .data {
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 50px;
+}
+
+.details small {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.details small span {
+    font-size: 1rem;
+}

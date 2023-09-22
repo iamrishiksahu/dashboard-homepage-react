@@ -1,0 +1,64 @@
+.course{
+    margin-top: 1rem;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    gap: 0.75rem;
+    border-radius: 1rem;
+    padding: 1rem;
+    background-color: white;
+    box-shadow: var(--box-shadow);
+}
+
+
+.course .details{
+    background-color: var(--color-background);
+    display: flex;
+    flex-direction: column;
+    margin: 0rem -1rem;
+    padding: 1rem 0rem;
+    align-items: center;
+}
+
+.course .details small{
+    text-align: center;
+}
+
+.course .details .box{
+    display: flex;
+    width: 100%;
+}
+
+.course .details .box img{
+    max-width: 8rem;
+    margin: 0rem 2rem;
+    background: white;
+    box-shadow: var(--box-shadow);
+}
+
+.course .details .box-right{
+    display: grid;
+    grid-template-columns: 25rem 25rem;
+}
+
+.course .details .box-right small{
+    color: var(--color-info-dark);
+}
+
+
+/* --------------- TABLE STYLING --------------- */
+.course table{
+    border: 1px var(--color-info-light) solid;
+    border-radius: 0.25rem;
+}
+.course table thead th{
+    background: var(--color-background);
+}
+
+.course table tr td input {
+    background: black;
+}
+
+.course table tr td:not(:first-child){
+    text-align: center;
+}

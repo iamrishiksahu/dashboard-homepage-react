@@ -1,38 +1,90 @@
-.App {
-  text-align: center;
+a{
+  color: var(--color-dark);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+img{
+  display: block;
+  width: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1{
+  font-weight: 800;
+  font-size: 1.8rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+h2{
+  font-size: 1.4rem;
+}
+
+h3{
+  font-size: 0.87rem;
+}
+
+h4{
+  font-size: 0.8rem;
+}
+
+h5{
+  font-size: 0.77rem;
+}
+
+small{
+  font-size: 0.75rem;
+}
+
+.profile-picture{
+  width: 2.8rem;
+  height: 2.8rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.text-muted{
+  color: var(--color-info-dark);
+}
+
+p{
+  color: var(--color-dark-variant);
+}
+
+b{
+  color: var(--color-dark);
+}
+
+.primary{
+  color: var(--color-primary)
+}
+
+.danger{
+  color: var(--color-danger);
+}
+
+.success{
+  color: var(--color-success);
+}
+
+.warning{
+  color: var(--color-warning);
+}
+
+.App{
+  display: grid;
+  width: 96%;
+  margin: 0 auto;
+  gap: 1.8rem;
+  grid-template-columns: 14rem auto 23rem;
+}
+
+#support-request-floating{
+
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: var(--color-primary);
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-weight: 700;
+  box-shadow: var(--box-shadow);
+  z-index: 10;
 }

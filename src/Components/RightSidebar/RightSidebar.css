@@ -1,0 +1,106 @@
+.right-side .top{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-top: 1rem;
+    justify-content: right;
+}
+
+.right-side .top .material-icons{
+    color: var(--color-dark);
+}
+
+.right-side .student-application .applications-list{
+    margin-top: 1rem;
+    box-shadow: var(--box-shadow);
+    background: white;
+    padding: 1rem 1rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.right-side .student-application .applications-list .application-item{
+    padding: 0.5rem 0rem;
+    border-bottom: 1px var(--color-light) solid;
+}
+.right-side .student-application .applications-list .application-item:hover{
+    background: var(--color-light);
+    padding-left: 1rem;
+    cursor: pointer;
+    transition: all 200ms ease;
+}
+.right-side .student-application .applications-list .application-item:last-child{
+    border-bottom: none;
+}
+
+
+/* ------------------------------ TIMTELINE STYLING ------------------------------ */
+
+.right-side .timeline{
+    margin-top: 1rem;
+}
+
+.right-side .timeline .timeline-list{
+    margin-top: 1rem;
+    background: white;
+    border-radius: 1rem;
+    box-shadow: var(--box-shadow);
+    padding: 1rem 1rem;
+}
+
+.right-side .timeline .timeline-list ul{
+    list-style: none;
+    padding-left: 50px;
+    position: relative;
+
+}
+
+.right-side .timeline .timeline-list ul::after{
+    content: '';
+    position: absolute;
+    width: 0.15rem;
+    height: calc(100% - 40px);
+    left: 1rem;
+    top: 0;
+    z-index: inherit;
+    margin-top: 1.8rem;
+    background: var(--color-light);
+}
+
+.right-side .timeline .timeline-list ul li{
+    padding: 0.75rem 0rem;
+    margin-left: -1rem;
+    font-size: 0.8rem;
+}
+
+.right-side .timeline .timeline-list ul li::after{
+    content: '';
+    width: 0.75rem;
+    height: 0.75rem;
+    position: absolute;
+    border: 1px var(--color-light) solid;
+    background: var(--color-background);
+    left: 0.66rem;
+    z-index: 2;
+    border-radius: 50%;
+    transform: translateY(20%);  
+}
+
+.right-side .timeline .timeline-list ul li.active::after{
+    background-color: var(--color-warning);
+}
+.right-side .timeline .timeline-list ul li.completed::after{
+    background-color: var(--color-primary);
+}
+
+#apply-btn{
+    background: var(--color-primary);
+    border-radius: 1rem;
+    padding: 0.25rem 1.5rem;
+    color: white;
+    font-weight: 700;
+}
+
+
